@@ -45,37 +45,34 @@ namespace Game1377_Excercises3
         {
             float floatInput1 = 976f;
             float floatInput2 = 7698f;
-            float sum = floatInput1 + floatInput2;
-            float diff = floatInput1 - floatInput2;
-            float product = sum + diff;
+            floatInput1 += floatInput2; //ok so = is needed but i need the the arithmetic, I don't need it to say float since it's already declared, keep that in mind
+            floatInput1 -= floatInput2;
+            floatInput1 -= floatInput2;
+            floatInput1 /= floatInput2;
             Console.WriteLine(floatInput1);
             Console.WriteLine(floatInput2);
-
-
-
         }
 
 
         static void ComparisonAndConditionals()
         {
-            int intInput1 = 654;
-            int intInput2 = 3775;
-            bool isintInput1GreaterThanintInput2=false;
-            bool isintInput1LessThanintInput2 = false;
+            int intInput1 = 654, intInput2 = 2775;
+            bool isintInput1GreaterThanintInput2 = false;
+            bool isintInput1EqualtointInput2 = intInput1 == intInput2;
 
             Console.WriteLine(intInput1);
             Console.WriteLine(intInput2);
             if (isintInput1GreaterThanintInput2)
             {
-                Console.WriteLine("is intInput1 greater than intInput2");
+                Console.WriteLine("intInput1 is greater than intInput2 according to the variable");
             }
-            else if (isintInput1LessThanintInput2)
+            else if (intInput1 < intInput2)
             {
-                Console.WriteLine("is intInput1 less than intInput2");
+                Console.WriteLine("intInput1 is less than intInput2 according to the variable");
             }
             else
             {
-                Console.WriteLine("intInput1 is not greater than intInput2 according to the variable");
+                Console.WriteLine("the inputs are not equal");
             }
         }
 
