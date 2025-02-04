@@ -60,14 +60,23 @@ namespace Game1377_Excercises3
         {
             int intInput1 = 654;
             int intInput2 = 3775;
-            
-            if()
-            {
-
-            }
+            bool isintInput1GreaterThanintInput2=false;
+            bool isintInput1LessThanintInput2 = false;
 
             Console.WriteLine(intInput1);
             Console.WriteLine(intInput2);
+            if (isintInput1GreaterThanintInput2)
+            {
+                Console.WriteLine("is intInput1 greater than intInput2");
+            }
+            else if (isintInput1LessThanintInput2)
+            {
+                Console.WriteLine("is intInput1 less than intInput2");
+            }
+            else
+            {
+                Console.WriteLine("intInput1 is not greater than intInput2 according to the variable");
+            }
         }
 
 
