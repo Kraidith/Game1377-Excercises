@@ -25,14 +25,14 @@ namespace Game1377_Excercises3
         }
         static void Arithmetic()
         {
-            string? inputString = Console.ReadLine(); //how to get an input
-            int intInput1 = Convert.ToInt32(inputString); //convert from string to int
-            string? inputString2 = Console.ReadLine(); //get another input
-            int intInput2 = Convert.ToInt32(inputString2); //convert to string2
+            string? inputString = Console.ReadLine(); 
+            int intInput1 = Convert.ToInt32(inputString); 
+            string? inputString2 = Console.ReadLine(); 
+            int intInput2 = Convert.ToInt32(inputString2); 
             int sum= intInput1 + intInput2;
             int diff = intInput1 - intInput2; 
             int product = sum * diff; 
-            float quotient_float = (float)intInput1 / intInput2; //so puting a different type in () will change it from an int to a float? yes it does cool 
+            float quotient_float = (float)intInput1 / intInput2;
             int remainder = intInput1 % intInput2;
             Console.WriteLine(sum);
             Console.WriteLine(diff);
@@ -46,9 +46,9 @@ namespace Game1377_Excercises3
             string? floatString = Console.ReadLine();
             float floatInput = Convert.ToSingle(floatString);
             string? floatString2 = Console.ReadLine();
-            float floatInput2 = Convert.ToSingle(floatString2); //ToSingle is for float ToInt32 is for int
+            float floatInput2 = Convert.ToSingle(floatString2); 
 
-            floatInput += floatInput2; //ok so = is needed but i need the the arithmetic, I don't need it to say float since it's already declared, keep that in mind
+            floatInput += floatInput2; 
             floatInput -= floatInput2;
             floatInput -= floatInput2;
             floatInput /= floatInput2;
