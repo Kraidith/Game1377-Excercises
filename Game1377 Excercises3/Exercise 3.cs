@@ -28,7 +28,9 @@ namespace Game1377_Excercises3
             string? inputString = Console.ReadLine(); 
             int intInput1 = Convert.ToInt32(inputString); 
             string? inputString2 = Console.ReadLine(); 
-            int intInput2 = Convert.ToInt32(inputString2); 
+            int intInput2 = Convert.ToInt32(inputString2);
+            intInput1 = 45;
+            intInput2 = 654;
             int sum= intInput1 + intInput2;
             int diff = intInput1 - intInput2; 
             int product = sum * diff; 
@@ -46,8 +48,9 @@ namespace Game1377_Excercises3
             string? floatString = Console.ReadLine();
             float floatInput = Convert.ToSingle(floatString);
             string? floatString2 = Console.ReadLine();
-            float floatInput2 = Convert.ToSingle(floatString2); 
-
+            float floatInput2 = Convert.ToSingle(floatString2);
+            floatInput = 45.43f;
+            floatInput2 = 32.58f;
             floatInput += floatInput2; 
             floatInput -= floatInput2;
             floatInput -= floatInput2;
@@ -61,6 +64,8 @@ namespace Game1377_Excercises3
             int intInput1 = Convert.ToInt32(inputString); 
             string? inputString2 = Console.ReadLine(); 
             int intInput2 = Convert.ToInt32(inputString2);
+            intInput1 = 345;
+            intInput2 = 45;
             if ( intInput1 >intInput2)
             {
                 Console.WriteLine("intInput1 is greater than intInput2 according to the variable");
