@@ -20,12 +20,21 @@ namespace HW_2
             int[] intArray = { 14, 25, 36, 47, 58 };
             float[] floatArray = { 16.0f, 27.0f, 38.0f, 49.0f, 60.0f };
             double[] doubleArray = { 15.0, 30.0, 45.0, 60.0, 75.0 };
+            int[] arrayMin = { 0 };
+            int[] arrayMax = { 10 };
             Methods(intArray);
             Methods(floatArray);
             Methods(doubleArray);
             Console.WriteLine("Average (int): " + Average(intArray));
             Console.WriteLine("Average (float): " + Average(floatArray));
             Console.WriteLine("Average (double): " + Average(doubleArray));
+            int arraySize = int.Parse(Console.ReadLine());
+            int rangeMin = int.Parse(Console.ReadLine());
+            int rangeMax = int.Parse(Console.ReadLine());
+            Console.WriteLine("Input length of the array:");
+            Console.WriteLine("Input Min range value of the array");
+            Console.WriteLine("Input max range values of th array");
+            int[] randomArray = RandomArray(arraySize, arrayMin, arrayMax);
         } 
 
         private static void Switch()
@@ -55,16 +64,13 @@ namespace HW_2
 
         private static void ArraysAndLoops()
         {
-            //a
             int[] intArray = { 100 , 94, 159, -783, 132, 179, 47, 107, 135, 50};
-            //b
             int intArrayIndex = intArray.Length - 1;
             while(intArrayIndex >= 0)
             {
                 Console.WriteLine("Reverse: " + intArray[intArrayIndex]);
                 intArrayIndex--;
             }
-            //c
             Random rnd = new Random();
             int randomIndex = 0;
             int chosenNumber = intArray[7];
@@ -75,7 +81,6 @@ namespace HW_2
                 Console.WriteLine("Guess the number: " + intArray[randomIndex]);
             }
             Console.WriteLine(" Yay! you got the Index: " + intArray[randomIndex]);
-            //d
             int sum = 0; 
             for (int i = 0; i < intArray.Length; i++)
             {
@@ -84,7 +89,6 @@ namespace HW_2
             int average = sum / intArray.Length;
             Console.WriteLine("Sum from the loop: " + sum);
             Console.WriteLine("Average: " + average);
-            //e
             for (int i =0; i < intArray.Length; i++)
             {
               if(i % 2 == 1)
@@ -93,7 +97,6 @@ namespace HW_2
               }
                 Console.WriteLine(intArray[i]);
             }
-            //f
             for(int i = 0; i < intArray.Length; i++)
             {
                 if(i % 3 != 0)
@@ -102,12 +105,19 @@ namespace HW_2
                 }
                 Console.WriteLine(intArray[i]);
             }
-            //g
-            int arraySize = 10;
-            int rangeMin = 0;
-            int rangeMax = 10;
-
-
+            Console.WriteLine("InputLength of the array");
+            int arraySize = int.Parse(Console.ReadLine());
+            Console.WriteLine("Input Min range value of the array");
+            int rangeMin = int.Parse(Console.ReadLine());
+            Console.WriteLine("Input Max range value of the array");
+            int rangeMax = int.Parse(Console.ReadLine());
+            int[] array = new int[arraySize];
+            _ = new Random();
+            for (int i =0; i < array.Length; i++)
+            {
+                array[i] = rnd.Next(rangeMin, rangeMax + 1);
+            }
+            Console.WriteLine("Generated new array");
         }
 
         private static void Methods(int[] array)
@@ -161,6 +171,16 @@ namespace HW_2
                 sum += i;
             }
             return (double)sum / array.Length;
+        }
+        private static int[] RandomArray(int arraySize, int[] rangeMin, int[] rangeMax)
+        {
+            Random rnd = new Random();
+            int[] array = new int[arraySize];
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rnd.Next(rangeMin[0], rangeMax[0] + 1);
+            }
+            return array;
         }
     }
      
