@@ -179,7 +179,7 @@ namespace HW_2
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = rnd.Next(rangeMin[0], rangeMax[0] + 1);
-            }
+            } 
             return array;
         }
     }
