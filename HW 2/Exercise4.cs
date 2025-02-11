@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace HW_2
 {
@@ -16,8 +17,16 @@ namespace HW_2
         {
          Switch();
          ArraysAndLoops();
-         Methods();
-        }
+            int[] intArray = { 14, 25, 36, 47, 58 };
+            float[] floatArray = { 16.0f, 27.0f, 38.0f, 49.0f, 60.0f };
+            double[] doubleArray = { 15.0, 30.0, 45.0, 60.0, 75.0 };
+            Methods(intArray);
+            Methods(floatArray);
+            Methods(doubleArray);
+            Console.WriteLine("Average (int): " + Average(intArray));
+            Console.WriteLine("Average (float): " + Average(floatArray));
+            Console.WriteLine("Average (double): " + Average(doubleArray));
+        } 
 
         private static void Switch()
         {
@@ -46,6 +55,7 @@ namespace HW_2
 
         private static void ArraysAndLoops()
         {
+            //a
             int[] intArray = { 100 , 94, 159, -783, 132, 179, 47, 107, 135, 50};
             //b
             int intArrayIndex = intArray.Length - 1;
@@ -93,12 +103,65 @@ namespace HW_2
                 Console.WriteLine(intArray[i]);
             }
             //g
+            int arraySize = 10;
+            int rangeMin = 0;
+            int rangeMax = 10;
+
 
         }
 
-        private static void Methods()
+        private static void Methods(int[] array)
         {
+            Console.WriteLine("Integer array elements");
+            foreach(int i in array)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        private static void Methods(float[] array)
+        {
+            Console.WriteLine("Float array elements");
+            foreach(float i in array)
+            {
+                Console.WriteLine(i);
+            }
+        } 
 
+        private static void Methods(double[] array)
+        {
+            Console.WriteLine("Double array elements");
+           foreach(double i in array)
+           {
+                Console.WriteLine(i);
+           }
+        }
+        private static float Average(int[] array)
+        {
+            int sum = 0;
+            foreach(int i in array)
+            {
+                sum += i;
+            }
+            return (float)sum / array.Length;
+        }
+        private static float Average(float[] array)
+        {
+            float sum = 0;
+            foreach(float i in array)
+            {
+             sum += i;
+            }
+            return (float)sum / array.Length;
+        }
+        private static double Average(double[] array)
+        {
+            double sum = 0;
+            foreach (double i in array)
+            {
+                sum += i;
+            }
+            return (double)sum / array.Length;
         }
     }
+     
 }
