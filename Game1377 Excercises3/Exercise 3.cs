@@ -7,10 +7,10 @@ namespace Game1377_Excercises3
         static void Main(string[] args)
         {
             Console.WriteLine("Executing Main\n");
-            OutgoingStrings();
-            Arithmetic();
-            Assignment();
-            ComparisonAndConditionals();
+            //OutgoingStrings();
+            //Arithmetic();
+            //Assignment();
+            //ComparisonAndConditionals();
         }
         static void OutgoingStrings()
         {
